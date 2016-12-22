@@ -1,5 +1,6 @@
+<!--2016-12-23-->
 <head>
-  <title>ìˆ˜ì›í†¡í†¡</title>
+  <title>¼ö¿øÅåÅå</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
   <meta http-equiv="content-type" content="text/html; charset=euc-kr">
 <style>
@@ -8,37 +9,55 @@ html, body {
 	margin:0px;
 	overflow:hidden;
 }
+a:link{
+	color:white;
+}
+a:visited{
+	color:white;
+}
 .bodycontainer {
 	height:100%;
 }
 .banner {
-	height:35%;
+	height:32%;
 	background-color:white;
 }
 .iconsection {
-	height:65%;
+	height:62%;
 	width:100%;
-	background-color:#666;
+	background-color:#DCDDDD;
+	margin-top:5%;
+	margin-left:5%;
+	margin-right:5%;
+	margin-bottom:4%;
 }
 .iconsection div{
-	height:33%;
-	width:50%;
+	height:30%;
+	width:45%;
 	float:left;
 }
 .iconsection div div{
 	background-color:white;
-	height:94%;
-	width:96%;
-	margin:5%;
+	height:99%;
+	width:99%;
 	border:none;
-	border-radius:10px;
 	padding:0;
 	margin:0;
-	margin-left:3%;
-	margin-top:4%;
 	font-size:70%;
 }
-/*íŒì—… ì•ˆì˜ divì˜ì—­*/
+#rightradius{
+	border-top-right-radius:8px;
+}
+#leftradius{
+	border-top-left-radius:8px;
+}
+#bottomrightradius{
+	border-bottom-right-radius:8px;
+}
+#bottomleftradius{
+	border-bottom-left-radius:8px;
+}
+/*ÆË¾÷ ¾ÈÀÇ div¿µ¿ª*/
 .iconsection div div div{
 	border:1px solid;
 	border-radius:3px;
@@ -57,79 +76,62 @@ html, body {
 	border:none;
 	outline:none;
 }
+
 .iconsection div div img{
 	width:80px;
 }
 .nobutton{
 	margin-top:10%;
 }
-.xbutton{
-	float:right;
-	margin:6px;
-	margin-bottom:-3px;
-	font-size:160%;
-}
-/*****popup CSSë¶€ë¶„********/
+
 /* Popup container - can be anything you want */
 .popup {
     position: relative;
+	background-color:#fff;
 }
 
-/* The actual popup */
-.popup .popuptext {
-    visibility: hidden;
-    width: 300%;
-    background-color: #666;
-    color: #fff;
-    text-align: center;
-    padding: 5px;
-	padding-bottom:54px;
-    position:absolute;
-    z-index: 1;
-	margin-left:-100%;
-	margin-top:-50%;
-	outline-style:none;
-	border:none;
-	border-radius:5px;
-	}
-.popup .popuptext2 {
-    visibility: hidden;
-    width: 300%;
-    background-color: #666;
-    color: #fff;
-    text-align: center;
-    padding: 5px;
-    position:absolute;
-    z-index: 1;
-	margin-left:-320%;
-	margin-top:-50%;
-	outline-style:none;
-	border:none;
-	border-radius:5px;
-	}
-.popup .popuptext3 {
-    visibility: hidden;
-    width: 300%;
-    background-color: #666;
-    color: #fff;
-    text-align: center;
-    padding: 5px;
-    position:absolute;
-    z-index: 1;
-	margin-left:-95%;
-	margin-top:-325%;
-	outline-style:none;
-	border:none;
-	border-radius:5px;
-	}
-
-/* Toggle this class - hide and show the popup */
-.popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
+/* The Modal (background) */
+.modal, .modal2, .modal3 {
+    display:none; /* none by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+	-webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
 }
+#inner{
+	height:8%;
+	line-height:150%;
+	border-radius:8px;
+	border:none;
+	margin-bottom:2%;
+	background-color:#fff;
+	color:black;
+}
+#pad{
+	position:absolute;
+	bottom:0;
+	right:0;
+	width:100%;
+	height:65%;
+	border:none;
+	background-color:#DCDDDD;
 
+}
+#cancel, #cancel2, #cancel3{
+	border:none;
+	background-color:#fff;
+	border-radius:8px;
+	height:8%;
+	line-height:120%;
+}
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
     from {opacity: 0;}
@@ -137,61 +139,273 @@ html, body {
 }
 @keyframes fadeIn {
     from {opacity: 0;}
-    to {opacity:1 ;}
-/***********íŒì—…CSSë***********/
+    to {opacity:1;}
 }
-
 </style>
 </head>
 
 <body style="background-color:#ddd" height="100%">
+
 <div class="bodycontainer">
+	<?
+	include("./suwon_include.html");
+	?>
 	<div class="banner">
-		<img src="" style="height:100%;width:100%;"/>		
+		<center><img src="./pic/banner.png" style="width:90%;"/></center>	
 	</div>
 
 	<div class="iconsection">
 		<!--1-->
-		<div><div><center><button class="popup" onclick="myFunction()"><img src="newicon.png"/><span class="popuptext" id="myPopup" style="height:200px"><span class="xbutton">&times;</span><br>
-		<a href="http://www.naver.com"><div>í™ˆí˜ì´ì§€</div></a>
-		<div>í¬í„¸ì‚¬ì´íŠ¸</div>
-		<div>ë¸”ë™ë³´ë“œ</div>
-		<div>êµ­ì œëŒ€í•™</div>
-		</span>
-</button><br>êµë‚´ì‚¬ì´íŠ¸</div></div>
+		<div>
+			<div id="leftradius"  class="popup">
+				<table style="width:100%;height:80%;margin-top:5%;"><tr>
+					<td style="width:32%;">
+					</td>
+					<td style="width:36%;">
+						<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;margin-bottom:8%;">
+						<img src="./pic/monitor.png" style="width:100%;background-color:#fff;" id="1st" onclick="change1()"/>
+						
+						<span id="id01" class="modal">
+						
+						<div id="pad">
+							<a href="http://m.suwon.ac.kr/"><div id="inner">È¨ÆäÀÌÁö</div></a>
+							<a href="http://portal.suwon.ac.kr/"><div id="inner">Æ÷ÅĞ»çÀÌÆ®</div></a>
+							<a href="https://blackboard.suwon.ac.kr/"><div id="inner">ºí·¢º¸µå</div></a>
+							<a href="http://ic.suwon.ac.kr/home-ko/"><div id="inner">±¹Á¦´ëÇĞ</div></a>
+							<div id="cancel" onclick="blackout()">Ãë¼Ò</div>
+						</div>						
+
+						</span>
+						
+						</button>
+					</td>
+					<td style="width:32%;">
+						<img src="./pic/popup.png" style="width:25%;margin-top:40%;"/>
+					</td></tr>
+					<tr><td></td><td><center><font style="font-size:70%;">±³³»»çÀÌÆ®
+					</font></center></td></tr>	
+				</table>	
+			</div>
+		</div>
 		
-		<!--2 popuptextë¶€ë¶„ì€ ì‚¬ì‹¤ ê³µê°„ì„ ì°¨ì§€í• ë¿ hiddenë˜ì–´ìˆë‹¤. ê·¸ë˜ì„œ ì¼ë°˜ ë²”ìœ„ë¥¼ ë„˜ì–´ê°€ì„œ ìŠ¤í¬ë¡¤ì´ ìƒê²¨ë²„ë¦°ë‹¤.bodyì— overflow:hiddenìœ¼ë¡œ ë„˜ì–´ê°€ëŠ” ë¶€ë¶„ì„ ì§¤ë¼ì¤¬ë‹¤.-->
-		<div><div><center><button class="popup" onclick="myFunction2()"><img src="newicon.png"/><span class="popuptext2" id="myPopup2" style="height:200px"><span class="xbutton">&times;</span><br>
-		<a href="http://www.naver.com"><div>ìŒì‹ì  ì „í™”ë²ˆí˜¸</div></a>
-		<div>êµë‚´ ì „í™”ë²ˆí˜¸</div>
-		</span></button><br>ì „í™”ë²ˆí˜¸ë¶€</div></div>
-		
+		<!--2 popuptextºÎºĞÀº »ç½Ç °ø°£À» Â÷ÁöÇÒ»Ó hiddenµÇ¾îÀÖ´Ù. ±×·¡¼­ ÀÏ¹İ ¹üÀ§¸¦ ³Ñ¾î°¡¼­ ½ºÅ©·ÑÀÌ »ı°Ü¹ö¸°´Ù.body¿¡ overflow:hiddenÀ¸·Î ³Ñ¾î°¡´Â ºÎºĞÀ» Â©¶óÁá´Ù.-->
+		<div>
+			<div id="rightradius" class="popup">
+				<table style="width:100%;height:80%;margin-top:5%;"><tr>
+					<td style="width:32%;">
+					</td>
+					<td style="width:36%;">
+						<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;margin-bottom:8%;">
+						<img src="./pic/telbook.png" style="width:80%;background-color:#fff" id="2nd" onclick="change2()"/>
+
+						<span id="id02" class="modal2">
+
+						<div id="pad">
+							<a href="./suwon_foodtel.php"><div id="inner">À½½ÄÁ¡ ÀüÈ­¹øÈ£</div></a>
+							<a href="./suwon_univtel.php"><div id="inner">±³³» ÀüÈ­¹øÈ£</div></a>
+							<div id="cancel2" onclick="blackout2()">Ãë¼Ò</div>
+						</div>
+						
+						</span>
+
+						</button>
+					</td>
+					<td style="width:32%;">
+						<img src="./pic/popup.png" style="width:25%;margin-top:90%;"/>
+					</td></tr>
+					<tr><td></td><td><center><font style="font-size:70%;">ÀüÈ­¹øÈ£ºÎ
+					</font></center></td></tr>	
+				</table>	
+			</div>
+		</div>
+
 		<!--3-->
-		<div><div><center><a href=""><img class="nobutton" src="newicon.png"/></a><br>ê²Œì‹œíŒ</div></div>
+		<div>
+			<div>
+				<table style="width:100%;height:80%;margin-top:5%;"><tr>
+					<td style="width:32%;">
+					</td>
+					<td style="width:36%;">
+						<a href="./suwon_board.php">
+						<button class="popup" style="margin-bottom:8%;">
+						<img src="./pic/board.png" style="width:100%;" id="3rd" onclick="change3()"/>
+						</button></a>
+					</td>
+					<td style="width:32%;">
+					</td></tr>
+					<tr><td></td><td><center><font style="font-size:70%;">°Ô½ÃÆÇ
+					</font></center></td></tr>	
+				</table>	
+			</div>
+		</div>
+	
 		<!--4:-->
-		<div><div><center><img class="nobutton" src="newicon.png"/><br>ì˜¤ëŠ˜ì˜ ì‹ë‹¨í‘œ</div></div>
+		<div>
+			<div>
+				<table style="width:100%;height:80%;margin-top:5%;"><tr>
+					<td style="width:32%;">
+					</td>
+					<td style="width:36%;">
+						<a href="http://m.suwon.ac.kr/community/listConvenienceMenu.do">
+						<button class="popup" style="margin-bottom:8%;">
+						<img src="./pic/food.png" style="width:80%;" id="4th" onclick="change4()"/>
+						</button></a>
+					</td>
+					<td style="width:32%;">
+					</td></tr>
+					<tr><td></td><td><center><font style="font-size:70%;">½Ä´ÜÇ¥
+					</font></center></td></tr>	
+				</table>	
+			</div>
+		</div>
+		
 		<!--5-->
-		<div><div><center><button class="popup" onclick="myFunction3()"><img src="newicon.png"/><span class="popuptext3" id="myPopup3" style="height:200px"><span class="xbutton">&times;</span><br><div>ëŒ€ì¤‘êµí†µ ì‹œê°„í‘œ</div>
-		<div>êµë‚´ì…”í‹€ ì‹œê°„í‘œ</div></span></button><br>ì‹œê°„í‘œ</div></div>
+		<div>
+			<div id="bottomleftradius">
+				<table style="width:100%;height:80%;margin-top:5%;"><tr>
+					<td style="width:32%;">
+					</td>
+					<td style="width:36%;">
+						<button onclick="document.getElementById('id03').style.display='block'" style="width:auto;margin-bottom:8%;">
+						<img src="./pic/timetable.png" style="width:100%;background-color:#fff;" id="5th" onclick="change5()"/>
+
+						<span id="id03" class="modal3">
+						
+						<div id="pad">
+							<a href="http://m.suwon.ac.kr/jsp/community/convenience/shuttlebus.html"><div id="inner">´ëÁß±³Åë, ¼ÅÆ²¹ö½º</div></a>
+							<a href="./bus.php"><div id="inner">±³³»¼ÅÆ² ½Ã°£Ç¥</div></a>
+							<div id="cancel3" onclick="blackout3()">Ãë¼Ò</div>
+
+						</div>
+						</span>
+						</button>
+						</td>
+					<td style="width:32%;">
+						<img src="./pic/popup.png" style="width:25%;margin-top:75%;"/>
+					</td></tr>
+					<tr><td></td><td><center><font style="font-size:70%;">¹ö½º½Ã°£Ç¥
+					</font></center></td></tr>					
+				</table>	
+			</div>
+		</div>
+
 		<!--5-->
-		<div><div><center><img class="nobutton" src="newicon.png"/><br>ê³ ê°ì„¼í„°</div></div>
+		<div>
+			<div id="bottomrightradius">
+				<table style="width:100%;height:80%;margin-top:5%;"><tr>
+					<td style="width:32%;">
+					</td>
+					<td style="width:36%;">
+						<a href="./service.php">
+						<button class="popup" style="margin-bottom:8%;">
+						<img src="./pic/service.png" style="width:90%;" id="6th" onclick="change6()"/>
+						</button></a>
+					</td>
+					<td style="width:32%;">
+					</td></tr>
+					<tr><td></td><td><center><font style="font-size:70%;">°í°´¼¾ÅÍ
+					</font></center></td></tr>
+				</table>	
+			</div>
+		</div>
+		
+
 	</div>
 </div>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+var modal2 = document.getElementById('id02');
+var modal3 = document.getElementById('id03');
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+	if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+	if (event.target == modal3) {
+        modal3.style.display = "none";
+    }
+}
+
+function blackout(){
+	var cancel = document.getElementById('cancel');
+	var modal = document.getElementById('id01');0
+	window.onclick = function(event) {
+    if (event.target == cancel) {
+        modal.style.display = "none";
+		}
+	}
+}
+function blackout2(){
+	var cancel = document.getElementById('cancel2');
+	var modal = document.getElementById('id02');0
+	window.onclick = function(event) {
+    if (event.target == cancel2) {
+        modal2.style.display = "none";
+		}
+	}
+}
+function blackout3(){
+	var cancel = document.getElementById('cancel3');
+	var modal = document.getElementById('id03');0
+	window.onclick = function(event) {
+    if (event.target == cancel3) {
+        modal3.style.display = "none";
+		}
+	}
+}
+</script>
 
 <script>
-//íŒì—… script, ê° íŒì—…ë³„ë¡œ cssë„ ë”°ë¡œ, classë„ ë”°ë¡œ, functionë„ ë”°ë¡œ!
-function myFunction() {
-    var popup = document.getElementById('myPopup');
-    popup.classList.toggle('show');
+
+//ÀÌ¹ÌÁö Å¬¸¯ º¯È¯
+function change1(){
+	var image= document.getElementById('1st');
+		image.src="./pic/monitor1.png";
+		setTimeout(function(){
+			image.src="./pic/monitor.png";
+		},500);
 }
-function myFunction2() {
-    var popup = document.getElementById('myPopup2');
-    popup.classList.toggle('show');
+function change2(){
+	var image= document.getElementById('2nd');
+		image.src="./pic/telbook1.png";
+		setTimeout(function(){
+			image.src="./pic/telbook.png";
+		},500);
 }
-function myFunction3() {
-    var popup = document.getElementById('myPopup3');
-    popup.classList.toggle('show');
-}</script>
+function change3(){
+	var image= document.getElementById('3rd');
+		image.src="./pic/board1.png";
+		setTimeout(function(){
+			image.src="./pic/board.png";
+		},500);
+}
+function change4(){
+	var image= document.getElementById('4th');
+		image.src="./pic/food1.png";
+		setTimeout(function(){
+			image.src="./pic/food.png";
+		},500);
+}
+function change5(){
+	var image= document.getElementById('5th');
+		image.src="./pic/timetable1.png";
+		setTimeout(function(){
+			image.src="./pic/timetable.png";
+		},500);
+}
+function change6(){
+	var image= document.getElementById('6th');
+		image.src="./pic/service1.png";
+		setTimeout(function(){
+			image.src="./pic/service.png";
+		},500);
+}
+
+</script>
 
 </body>
 </html>
