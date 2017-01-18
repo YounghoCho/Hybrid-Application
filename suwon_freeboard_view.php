@@ -71,7 +71,7 @@ a:active{
 </style>
 </head>
 
-<body>
+<body id="top">
 	<?
 	include("./suwon_include.html");
 	include("./suwon_include_button.php");
@@ -213,8 +213,16 @@ if(!$data[0]){
 
 <table style="width:100%;height:11%;margin-top:-3%;margin-bottom:0%;background-color:#DCDDDD;">
     <tr>
-		<td width="33%">
+		<td width="33%" align="center" style="padding-left:1%;">
+			<a href="./suwon_freeboard_view.php?b_num=<?=$data["b_num"]+1?>">
+				<img src="./pic/up.png" style="width:45px;"/>
+			</a>
+			&nbsp;
+			<a href="./suwon_freeboard_view.php?b_num=<?=$data["b_num"]-1?>">
+				<img src="./pic/down.png" style="width:45px;margin-top:0%;"/>
+			</a>
 		</td>
+
         <td width="33%" align="center" valign="middle">
         <input style="width:55%;height:86%;background-color:#898989;color:#fff;border:1px solid #fff;padding-top:2px;padding-bottom:2px;-webkit-appearance:none;" type="button" value=" 목록 " onClick="location.href='./suwon_freeboard.php?page=<?=$_GET["page"]?>';">
         <?php
@@ -227,15 +235,6 @@ if(!$data[0]){
 		?>
         </td>
 		<td width="33%">
-			<a href="./suwon_freeboard_view.php?b_num=<?=$data["b_num"]+1?>">
-				<img src="./pic/up.png" style="width:45px;"/>
-			</a>
-			&nbsp;
-			<a href="./suwon_freeboard_view.php?b_num=<?=$data["b_num"]-1?>">
-				<img src="./pic/down.png" style="width:45px;margin-top:0%;"/>
-			</a>
-			
-
 		</td>
     </tr>
 </table>
@@ -243,6 +242,11 @@ if(!$data[0]){
 <!-------------------------------------------->	
 		</div>
 	</div>
+
+</div>
+<div style="position:fixed;bottom:2%;right:2%;">
+	<a href="#top">
+	<img src="./pic/goup.png" style="width:40px;height:40px;"></a>
 
 </div>
 
