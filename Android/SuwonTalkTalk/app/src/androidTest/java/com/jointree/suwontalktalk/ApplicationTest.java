@@ -1,4 +1,4 @@
-package com.example.suwontalktalk;
+package com.jointree.suwontalktalk;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

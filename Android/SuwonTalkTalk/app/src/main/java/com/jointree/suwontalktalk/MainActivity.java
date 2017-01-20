@@ -1,4 +1,4 @@
-package com.example.suwontalktalk;
+package com.jointree.suwontalktalk;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -28,7 +29,37 @@ public class MainActivity extends AppCompatActivity {
         WebSettings webSettings = webView.getSettings();
         //자바스크립트를 가능하게 한다.
         webSettings.setJavaScriptEnabled(true);
+        //웹뷰 터치를 가능하게 한다, xml에도 focusable 2가지 코드 설정함
+        webView.getSettings().setBuiltInZoomControls(true);
+        webView.getSettings().setSupportZoom(true);
 
+        //안드로이드에서는 JS의 confirm과 alert가 안된다. http://blog.suromind.com/28
+        webView.setWebChromeClient(new WebChromeClient() {
+                                       //confirm
+                                       public boolean onJsConfirm(WebView view, String url,
+                                                                  String message, final android.webkit.JsResult result) {
+                                           new AlertDialog.Builder(view.getContext())
+                                                   .setTitle("수원톡톡")
+                                                   .setMessage(message)
+                                                   .setPositiveButton(android.R.string.ok,
+                                                           new AlertDialog.OnClickListener() {
+                                                               public void onClick(
+                                                                       DialogInterface dialog,
+                                                                       int which) {
+                                                                   result.confirm();
+                                                               }
+                                                           })
+                                                   .setNegativeButton(android.R.string.cancel,
+                                                           new AlertDialog.OnClickListener() {
+                                                               public void onClick(
+                                                                       DialogInterface dialog,
+                                                                       int which) {
+                                                                   result.cancel();
+                                                               }
+                                                           }).setCancelable(false).create().show();
+                                           return true;
+                                       }
+                                   });
         //Web의 tel: 연결기능을 안드로이드에서도 기능하게하기
         webView.setWebViewClient(new WebViewClient(){
             @Override
@@ -59,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         //백할 페이지가 없다면
-        if ((keyCode == KeyEvent.KEYCODE_BACK) && (webView.canGoBack() == false)){
+        if ((keyCode == KeyEvent.KEYCODE_BACK) && (!webView.canGoBack())){
             //     Toast.makeText(this, "버튼 클릭 이벤트", Toast.LENGTH_SHORT).show();
 
             //다이아로그박스 출력
