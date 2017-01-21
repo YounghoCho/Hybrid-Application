@@ -70,7 +70,14 @@ a:active{
 	<?
 	$sql="select * from univcall where call_dep like '%".$_GET['univdep']."%';";
 	$mid=mysql_query($sql);
-
+	
+	if(mysql_num_rows($mid)==0){
+		?>
+		<center>
+		<img src="./pic/noresult.png" style="width:50%;margin-top:30%;" />
+		</center>
+		<?
+	}
 	//넘겨온 fs(검색어)에 따라 음식점이름 불러오기
 	
 		while($result=mysql_fetch_array($mid)){
