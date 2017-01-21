@@ -90,7 +90,7 @@ font{
 </style>
 </head>
 
-<body>
+<body id="top">
 	<?
 	include("./suwon_include.html");
 	include("./suwon_include_button.php");
@@ -137,6 +137,15 @@ $from_record = ($page - 1) * $page_row;
 
 $query = "select * from tb_board2 where b_title like '%".$_GET['free']."%' order by b_num desc, b_reply asc limit ".$from_record.", ".$page_row;
 $result = mysql_query($query, $connect);
+
+	if(mysql_num_rows($result)==0){
+		?>
+		<center>
+		<img src="./pic/noresult.png" style="width:50%;margin-top:20%;" />
+		</center>
+		<?
+	}
+
 $i = 0;
 while($data = mysql_fetch_array($result))
 	{
@@ -184,6 +193,19 @@ while($data = mysql_fetch_array($result))
 	</div>
 
 </div>
+<div style="position:fixed;bottom:2%;right:2%;">
+	<a href="#top">
+	<img src="./pic/goup.png" style="width:40px;height:40px;" id="1st" onClick="change1()"></a>
 
+</div>
 </body>
 </html>
+<script>
+function change1(){
+	var image= document.getElementById('1st');
+		image.src="./pic/goup1.png";
+		setTimeout(function(){
+			image.src="./pic/goup.png";
+		},500);
+}
+</script>

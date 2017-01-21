@@ -48,6 +48,13 @@ table tr td{
 	$sql="select * from foodtel where f_name like '%".$_GET['food']."%';";
 	$mid=mysql_query($sql);
 
+	if(mysql_num_rows($mid)==0){
+		?>
+		<center>
+		<img src="./pic/noresult.png" style="width:50%;margin-top:30%;" />
+		</center>
+		<?
+	}
 	//넘겨온 num에 따라 번호 불러오기
 			while($result=mysql_fetch_array($mid)){
 			?>

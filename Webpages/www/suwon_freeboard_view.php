@@ -153,7 +153,7 @@ if(!$data[0]){
 					<table>
 						<tr>
 							<td rowspan="2" style="width:10%;padding-top:3%;padding-right:2%;">
-								<img src="./pic/people.png" style="width:100%;"/>
+								<img src="./pic/people1.png" style="width:100%;"/>
 							</td>
 							<td>
 								<font style="font-size:2%;width:20%;color:#898989;font-family: 'Noto Sans KR', sans-serif;">
@@ -252,7 +252,7 @@ if(!$data[0]){
 </div>
 <div style="position:fixed;bottom:2%;right:2%;">
 	<a href="#top">
-	<img src="./pic/goup.png" style="width:40px;height:40px;"></a>
+	<img src="./pic/goup.png" style="width:40px;height:40px;" id="1st" onClick="change1()"></a>
 
 </div>
 
@@ -278,5 +278,13 @@ function delete_comment(cname, cindex)
 {
 	if(confirm("삭제 하시겠습니까?"))
 		location.href='suwon_freeboard_delete_comment.php?cname='+cname+'&cindex='+cindex;
+}
+
+function change1(){
+	var image= document.getElementById('1st');
+		image.src="./pic/goup1.png";
+		setTimeout(function(){
+			image.src="./pic/goup.png";
+		},500);
 }
 </script>
