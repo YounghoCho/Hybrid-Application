@@ -6,6 +6,14 @@ The spaces are called as "Dae-na-mu-soop" or "dae-sin-jun-hae-de-rip-ni-da", tha
 
 However, there are some critical inconveniences, and I'm gonna solve the problems perfectly.
 
+# We are
+- 4 Bulletin boards to write freely
+- telephone book including inside & outside information of University
+- Combination of University Websites (Also, I Changed Desktop version Websites to Mobile view)
+- Time tables (Public transportation, School bus)
+- Medium and small firm recruting service(preparing)
+- Information about recruting and Start up one's business
+
 # Application Download links
 
 Android : this one was launched on 2017.01.20. I didn't promote yet
