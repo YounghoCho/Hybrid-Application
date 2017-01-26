@@ -35,7 +35,7 @@ if($resultc[0]==$_SESSION["user_id"]){
 }
 else{
 */
-$sql = "insert into tb_board4 set b_reply = '', m_id = '".$_SESSION["user_id"]."', m_name = '".$_SESSION["user_name"]."', b_title = '".$_POST["b_title"]."', b_contents = '".$_POST["b_contents"]."', b_regdate = now(), ip='".$_POST["ip"]."';";
+$sql = "insert into tb_board4 set b_reply = '', m_id = '".$_SESSION["user_id"]."', m_name = '".$_SESSION["user_name"]."', b_title = '".$_POST["b_title"]."', b_contents = '".nl2br($_POST["b_contents"])."', b_regdate = now(), ip='".$_POST["ip"]."';";
 sql_query($sql);
 
 //이전의 insert작업을 하고 auto_increased된 id를 반환한다.
