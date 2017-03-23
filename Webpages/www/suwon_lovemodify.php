@@ -41,7 +41,7 @@ button{
 		</tr>
 		<tr>
 			<td align="left" valign="middle" style="width:80%;height:60%;">
-			<textarea id="ccc" name="b_contents" style="width:100%;height:100%;font-size:100%;color:#898989;border:none;padding-left:4%;"><?=$data["b_contents"]?></textarea>
+			<textarea id="ccc" name="b_contents" style="width:100%;height:100%;font-size:100%;color:#898989;border:none;padding-left:4%;"><?=str_replace('<br />', '', $data["b_contents"])?></textarea>
 			</td>
 		</tr>
 		<tr>

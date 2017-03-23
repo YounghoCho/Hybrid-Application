@@ -145,6 +145,9 @@ if(!$data[0]){
 		$sql="select * from re5 where cnum='".$data["b_idx"]."' order by cindex";
 		$result=sql_query($sql, $connect);
 		
+		$test4=0;
+		global $test4;
+
 		while($com=mysql_fetch_array($result)){
 		?>
 		<div width="100%">
@@ -192,6 +195,7 @@ if(!$data[0]){
 			</li>
 		</div>
 	<?php
+	$test4 +=1;
 	}
 	?>
 	<hr style="margin:2%;border:1px solid #fff">
@@ -250,12 +254,17 @@ if(!$data[0]){
 	</div>
 
 </div>
+<?
+if($test4>7){
+?>
 <div style="position:fixed;bottom:2%;right:2%;">
 	<a href="#top">
 	<img src="./pic/goup.png" style="width:40px;height:40px;" id="1st" onClick="change1()"></a>
 
 </div>
-
+<?
+}
+?>
 </body>
 </html>
 

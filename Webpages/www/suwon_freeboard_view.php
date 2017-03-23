@@ -91,7 +91,7 @@ $data = mysql_fetch_array($result);
 if(!$data[0]){
 	?>
 	<script>
-		alert("글이 없습니다");
+		alert("삭제된 글입니다.");
 		history.back();
 	</script>
 	<?
@@ -145,6 +145,9 @@ if(!$data[0]){
 		$sql="select * from re2 where cnum='".$data["b_idx"]."' order by cindex";
 		$result=sql_query($sql, $connect);
 		
+		$test=0;
+		global $test;
+		
 		while($com=mysql_fetch_array($result)){
 		?>
 		<div width="100%">
@@ -171,7 +174,7 @@ if(!$data[0]){
 
 								<!--관리자 댓글 삭제 모드-->
 								<?php
-								if($_SESSION["m_name"] =='관리자'){
+								if($_SESSION["user_name"] =='관리자'){
 								?>
 								<font color="red" size="1%">
 								<input type="button" value="x" style="width:15px;height:15px;color:red;border:0px;background-color:#fff;" onClick="delete_comment('<?=$com["cname"]?>', '<?=$com["cindex"]?>')"></font>
@@ -192,6 +195,7 @@ if(!$data[0]){
 			</li>
 		</div>
 	<?php
+	$test +=1;
 	}
 	?>
 	<hr style="margin:2%;border:1px solid #fff">
@@ -250,12 +254,17 @@ if(!$data[0]){
 	</div>
 
 </div>
+<?
+if($test>7){
+?>
 <div style="position:fixed;bottom:2%;right:2%;">
 	<a href="#top">
 	<img src="./pic/goup.png" style="width:40px;height:40px;" id="1st" onClick="change1()"></a>
 
 </div>
-
+<?
+}
+?>
 </body>
 </html>
 

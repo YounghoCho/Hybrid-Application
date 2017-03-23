@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 include ("./freeboard_lib.php");
 $connect = sql_connect($db_host, $db_user, $db_pass, $db_name);
@@ -21,20 +21,21 @@ if(trim($_POST["b_contents"]) == ""){
     <?php
     exit;
 }
-/*
-$c="select m_id from tb_board2 order by b_idx desc;";
+
+//도배방지
+$c="select ip from tb_board2 order by b_idx desc;";
 $rec=mysql_query($c);
 $resultc= mysql_fetch_array($rec);
 
-if($resultc[0]==$_SESSION["user_id"]){
+if($resultc[0]==$_SERVER["REMOTE_ADDR"]){
 ?>
 	<script>
 	alert("연속해서 글을 쓸 수 없습니다.");
+	
 	</script>
-<?php
-}
-else{
-*/
+<?
+}else{
+
 $sql = "insert into tb_board2 set b_reply = '', m_id = '".$_SESSION["user_id"]."', m_name = '".$_SESSION["user_name"]."', b_title = '".$_POST["b_title"]."', b_contents = '".nl2br($_POST["b_contents"])."', b_regdate = now(), ip='".$_POST["ip"]."';";
 sql_query($sql);
 
@@ -56,6 +57,8 @@ sql_query($sql2);
 $b_idx2 = mysql_insert_id();
 $sql3 = "update newest set b_num = '".$b_idx."' where b_idx = '".$b_idx2."'";
 sql_query($sql3);
+
+	}
 ?>
 
 <script>

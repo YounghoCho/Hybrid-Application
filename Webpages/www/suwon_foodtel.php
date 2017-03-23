@@ -168,7 +168,7 @@ a:active{
 </style>
 </head>
 
-<body>
+<body id="top">
 	<?
 	include("./suwon_include.html");
 	?>

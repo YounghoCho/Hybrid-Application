@@ -115,7 +115,7 @@ font{
 	<div class="board">
 		<div class="boardhead">
 			<div style="width:49%;height:20px;float:left">
-				<table style="color:#fff;line-height:140%;"><tr><td><b>&nbsp;&nbsp;벼룩시장</b></td></tr></table>
+				<table style="color:#fff;line-height:140%;"><tr><td><b>&nbsp;&nbsp;방, 교재, 물품 등</b></td></tr></table>
 			</div>
 			<div style="width:49%;height:20px;float:left">
 				<a href="./suwon_sellwrite.php">

@@ -5,11 +5,19 @@ $connect = sql_connect($db_host, $db_user, $db_pass, $db_name);
 
 $black="select black_ip from blacklist;";
 $black1=sql_query($black);
-while($black2=mysql_fetch_array($black1)){
-	if($_SERVER["REMOTE_ADDR"]==$black2[0])
-	{
-	phpinfo();
-	}
+$black2=mysql_fetch_array($black1);
+
+if($_SERVER["REMOTE_ADDR"]==$black2[0]){
+	?>
+	<script>
+	location.href="suwon_blackout.html";
+	</script>
+	<?
+}
+if($_SESSION['user_name']=='관리자'){
+	?>
+	<button onclick="location.href='./suwon_admin.php'">관리자 페이지</button>
+	<?
 }
 ?>
 
