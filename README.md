@@ -14,7 +14,7 @@
 - Daily menu of the university.
 
 # Screen Shot
-!(./images/hybrid.png)
+![1](./images/hybrid.png)
 
 # Market links
 -Android : this one was launched on 2017.01.20. I didn't promote yet
