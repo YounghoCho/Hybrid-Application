@@ -1,6 +1,8 @@
-# SuTalk
+# Suwon Talk-Talk
 
-My goal is to win Facebook among Korean University students.
+## Introduction
+> This is an Hybrid application based on responsible website.
+- The target of this is Suwon University students.
 For the most part of Univ's students use Facebook as a community space of them.
 The spaces are called as "Dae-na-mu-soop" or "dae-sin-jun-hae-de-rip-ni-da", thay mean pages that uploads students' messages instead.
 
