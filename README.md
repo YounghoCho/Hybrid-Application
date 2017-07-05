@@ -1,27 +1,24 @@
-# Suwon Talk-Talk
-
-## Introduction
+## Community Application
+# Introduction
 > This is an Hybrid application based on responsible website.
 - The target of this is Suwon University students.
-For the most part of Univ's students use Facebook as a community space of them.
-The spaces are called as "Dae-na-mu-soop" or "dae-sin-jun-hae-de-rip-ni-da", thay mean pages that uploads students' messages instead.
+- For the most part of Univ's students use Facebook as a community space of them.
+- However, there are some critical inconveniences on them.
+- So, This app will solve the problems and attract users of the communities to this community.
 
-However, there are some critical inconveniences, and I'm gonna solve the problems perfectly.
+# What's inside?
+- 4 Bulletin boards to write anonymously.
+- Telephone books about inside of University and shops, restaurants around the university.
+- Collections of University Websites.
+- Time tables of public transportation and school bus.
+- Daily menu of the university.
 
-# We are
-- 4 Bulletin boards to write freely
-- telephone book including inside & outside information of University
-- Combination of University Websites (Also, I Changed Desktop version Websites to Mobile view)
-- Time tables (Public transportation, School bus)
-- Medium and small firm recruting service(preparing)
-- Information about recruting and Start up one's business
+# Screen Shot
+![ex1](./images/ex.png)
 
-# Application Download links
+# Market links
+-Android : this one was launched on 2017.01.20. I didn't promote yet
+ https://play.google.com/store/apps/details?id=com.jointree.suwontalktalk
 
-Android : this one was launched on 2017.01.20. I didn't promote yet
-
-https://play.google.com/store/apps/details?id=com.jointree.suwontalktalk
-
-IOS : If you visit a link under, now you can see an old version. New one will be launched on 2017.01.23~01.24
-
-https://appsto.re/kr/e8xmeb.i
+-IOS : If you visit a link under, now you can see an old version. New one will be launched on 2017.01.23~01.24
+ https://appsto.re/kr/e8xmeb.i
