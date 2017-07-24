@@ -104,10 +104,11 @@ a:active{
 	width:90%;
 	height:10%;
 	margin-left:5%;
-	margin-top:1%;
+	margin-bottom:1%;
 	background-color:#0689FF;
 	color:#fff;
 	border-radius:8px;
+	font-weight:bold;
 }
 
 /* 광고영역 */
@@ -186,6 +187,7 @@ a:active{
 	</div>
 
 		<div class="boardbody">
+			<button class="underupper" onclick="location.href='./daum.html'">지도로 검색하기</button>
 
 			<table class="foodbutton"><tr>
 				<td id="leftradius" class="left" style="width:50%;height:100%;">
@@ -232,7 +234,6 @@ a:active{
 				</tr>
 			</table>
 
-			<button class="underupper" onclick="location.href='./daum.html'">지도에서 검색 가능합니다.</button>
 		</div>
 	
 	<!--광고영역-->

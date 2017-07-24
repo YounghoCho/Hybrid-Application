@@ -3,7 +3,6 @@
 include ("./freeboard_lib.php");
 $connect = sql_connect($db_host, $db_user, $db_pass, $db_name);
 ?>
-
 <head>
   <title>수원톡톡</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
@@ -99,12 +98,13 @@ font{
 	include("./suwon_include.html");
 	include("./suwon_include_button.php");
 	?>
+<!--가려진 버튼은 include button에 들어있다-->
 
 <div class="bodydiv">
 	<div class="bodyhead">
 			<div class="search">
 				<form name="sf" action="suwon_freesearch.php" method="GET" autocomplete="on">
-				<input name="free" type="text" size="30" value="글 내용을 입력해주세요" onfocus="this.value=''" style="padding-left:4%;border-radius:5px;font-family: 'Nanum Gothic', serif;" autocomplete="off">
+				<input name="free" type="text" size="30" value="검색 내용을 입력해주세요" onfocus="this.value=''" style="padding-left:4%;border-radius:5px;font-family: 'Nanum Gothic', serif;" autocomplete="off">
 			</div>
 			<div class="go">
 				<button type="submit" style="border:none;width:25px;height:20px;bacground-color:#fff;margin-top:12%;border-radius:5px;background-image: url('./pic/go.png');;background-size:22px;background-repeat:no-repeat;"></button>

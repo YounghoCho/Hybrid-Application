@@ -26,6 +26,7 @@ html, body{
 </style>
 </head>
 
+<!--
 <div class="head">
 	<center>
 		<table style="width:94%;height:100%;">
@@ -42,7 +43,7 @@ html, body{
 		</table>
 	</center>
 </div> 
-
+-->
 <script>
 function changecolor(){
 document.getElementById('a').style.backgroundColor="#0689FF";

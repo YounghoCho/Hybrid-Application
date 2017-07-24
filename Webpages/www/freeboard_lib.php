@@ -89,6 +89,6 @@ function change2(){
 		image.src="./pic/right.png";
 		setTimeout(function(){
 			image.src="./pic/right1.png";
-		},500);
+		},0);
 }
 </script>
